@@ -8,13 +8,13 @@
     ./yazi.nix
     ./zk.nix
     ./bash.nix
+    ./fish.nix
   ];
 
   home.packages = (
     with pkgs;
     [
       fzf
-
       ripgrep
     ]
   );
