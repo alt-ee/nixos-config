@@ -12,6 +12,7 @@
     ../features/cli
     ../features/cli/man.nix
     ../features/desktop
+    ../features/desktop/i3.nix
   ];
 
   options = {

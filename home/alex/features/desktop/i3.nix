@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   lib,
   ...
@@ -9,8 +8,11 @@ let
   refreshi3status = "killall -SIGUSR1 i3status";
 in
 {
-  xsession.windowManager.i3 = {
+  imports = [
+    ./rofi.nix
+  ];
 
+  xsession.windowManager.i3 = {
     enable = true;
     package = pkgs.i3-gaps;
     config = {
