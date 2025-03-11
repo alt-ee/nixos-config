@@ -6,32 +6,18 @@
 {
   home.packages =
     (with pkgs; [
-      anki
       audacity
       beets
-      bitwig-studio
       calibre
-      cowsay
       distrho-ports
       emacs
       ffmpeg
-      fzf
-      geogebra
       gimp
-      gparted
       imagemagick
       keepassxc
       libreoffice
       man-pages
-      nb
       nicotine-plus
-      octaveFull
-      okular
-      puredata
-      python3
-      qmmp
-      ranger
-      ripgrep
       syncthing
       unzip
       vlc

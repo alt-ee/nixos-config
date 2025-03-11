@@ -8,10 +8,9 @@
 }:
 {
   imports = [
-    ../features/shell.nix
-    ../features/packages.nix
+    ./packages.nix
     ../features/cli
-    ../features/services.nix
+    ../features/cli/man.nix
     ../features/desktop
   ];
 
@@ -55,6 +54,42 @@
         ".config/i3status/" = {
           source = config.lib.file.mkOutOfStoreSymlink "${config.dotfiles}/.config/i3status";
         };
+      };
+
+      sessionVariables = {
+        TERMINAL = "wezterm";
+      };
+
+      shellAliases = {
+        cnix = "cd ${config.nixfiles}";
+        switchhome = "cnix && home-manager switch --flake .#alex@inspiron";
+        switchnix = "cnix && sudo nixos-rebuild switch --flake .#inspiron";
+
+        t = "todo.sh";
+      };
+
+    };
+
+    services = {
+      syncthing.enable = true;
+      xsettingsd.enable = true;
+    };
+
+    xdg.desktopEntries = {
+      renoise = {
+        name = "Renoise";
+        genericName = "Music Tracker";
+        type = "Application";
+        categories = [
+          "AudioVideo"
+          "Audio"
+        ];
+        exec = "nix-jack renoise";
+        terminal = false;
+        mimeType = [
+          "application/x-renoise-module"
+          "application/x-renoise-rns-module"
+        ];
       };
     };
 
