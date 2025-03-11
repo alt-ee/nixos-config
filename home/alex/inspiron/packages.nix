@@ -46,6 +46,5 @@
         keepmenu
         renoise
         todo-txt-cli
-        wezterm
       ]);
 }
