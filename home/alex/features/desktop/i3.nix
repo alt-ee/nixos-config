@@ -40,8 +40,7 @@ in
         "${mod}+Tab" = ''
           		  exec "rofi -show window -theme-str 'window {width: 50%;}'"
           		'';
-        "${mod}+f" = "exec rofi -show filebrowser";
-        "${mod}+Shift+f" = "exec i3-sensible-terminal -e yazi";
+        "${mod}+f" = "exec i3-sensible-terminal -e fish -C yy";
         "${mod}+t" = "exec i3-sensible-terminal";
         "${mod}+p" = "exec keepmenu -C";
         "${mod}+Escape" = "exec xflock4";
