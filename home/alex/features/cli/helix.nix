@@ -1,6 +1,6 @@
 {
+  inputs,
   pkgs,
-  pkgs-unstable,
   lib,
   ...
 }:
@@ -8,7 +8,7 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    package = pkgs-unstable.helix;
+    package = inputs.helix.packages."${pkgs.system}".helix;
     settings = {
       theme = "base16_transparent";
       editor = {

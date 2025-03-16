@@ -9,6 +9,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     musnix.url = "github:musnix/musnix";
+
+    helix.url = "github:helix-editor/helix/master";
   };
 
   outputs =
@@ -18,6 +20,7 @@
       nixpkgs-unstable,
       home-manager,
       musnix,
+      helix,
       ...
     }@inputs:
     let
@@ -45,7 +48,10 @@
       homeConfigurations = {
         "alex@inspiron" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit pkgs-unstable; };
+          extraSpecialArgs = {
+            inherit pkgs-unstable;
+            inherit inputs;
+          };
           modules = [ ./home/alex/inspiron ];
         };
 
