@@ -18,6 +18,7 @@
       libreoffice
       man-pages
       nicotine-plus
+      reaper
       syncthing
       unzip
       vlc
