@@ -8,6 +8,7 @@
 }:
 {
   imports = [
+    ./packages.nix
     ../features/cli
     ../features/desktop
     ../features/cli/git.nix
