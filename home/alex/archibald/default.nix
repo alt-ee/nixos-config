@@ -9,6 +9,8 @@
 {
   imports = [
     ../features/cli
+    ../features/desktop
+    ../features/cli/git.nix
   ];
 
   nixpkgs.config = {
@@ -22,6 +24,8 @@
     username = "alex";
     homeDirectory = "/home/alex";
   };
+
+  systemd.user.startServices = "sd-switch";
 
   home.stateVersion = "24.11";
 }

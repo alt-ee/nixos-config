@@ -14,12 +14,10 @@
       ffmpeg
       gimp
       imagemagick
-      keepassxc
       libreoffice
       man-pages
       nicotine-plus
       reaper
-      syncthing
       unzip
       vlc
       winetricks

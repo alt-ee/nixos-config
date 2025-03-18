@@ -14,7 +14,7 @@
         config.audible_bell = "Disabled"
         config.check_for_updates = false
 
-        config.font = wezterm.font("Iosevka Term")
+        config.font = wezterm.font("Iosevka")
         config.color_scheme = "bm-khold-inverted"
         config.font_size = 13
         config.use_fancy_tab_bar = false

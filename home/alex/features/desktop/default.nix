@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 {
@@ -7,5 +8,16 @@
     ./wezterm.nix
   ];
 
-  services.ssh-agent.enable = true;
+  home.packages = (
+    with pkgs;
+    [
+      keepassxc
+    ]
+  );
+
+  services = {
+    ssh-agent.enable = true;
+    syncthing.enable = true;
+  };
+
 }

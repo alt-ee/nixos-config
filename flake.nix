@@ -42,6 +42,11 @@
             ./hosts/inspiron
           ];
         };
+        archibald = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./hosts/archibald
+          ];
+        };
       };
 
       # 'home-manager build/switch --flake .#your-username@your-hostname'
@@ -57,7 +62,10 @@
 
         "alex@archibald" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit pkgs-unstable; };
+          extraSpecialArgs = {
+            inherit pkgs-unstable;
+            inherit inputs;
+          };
           modules = [ ./home/alex/archibald ];
         };
       };
