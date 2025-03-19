@@ -53,6 +53,8 @@
   services.xserver = {
     enable = true;
 
+    videoDrivers = [ "nvidia" ];
+
     # Enable the Cinnamon Desktop Environment.
     displayManager.lightdm.enable = true;
     desktopManager.cinnamon.enable = true;
@@ -66,6 +68,22 @@
 
   services.gnome.gnome-keyring.enable = lib.mkForce false;
 
+  hardware.graphics.enable = true;
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+
+    powerManagement = {
+      enable = false;
+      finegrained = false;
+    };
+
+    open = false;
+
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
   # Configure console keymap
   console.keyMap = "uk";
 
@@ -75,6 +93,7 @@
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -93,6 +112,13 @@
   };
 
   programs.firefox.enable = true;
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  };
 
   nixpkgs.config.allowUnfree = true;
 

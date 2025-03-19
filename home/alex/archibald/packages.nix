@@ -7,6 +7,9 @@
     with pkgs;
     [
       kdenlive
+      obs-studio
+      reaper
+      prismlauncher
     ]
   );
 }
