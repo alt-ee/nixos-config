@@ -10,6 +10,8 @@
       obs-studio
       reaper
       prismlauncher
+      discord
+      vlc
     ]
   );
 }
