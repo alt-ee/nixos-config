@@ -12,6 +12,7 @@
     with pkgs;
     [
       keepassxc
+      obsidian
     ]
   );
 

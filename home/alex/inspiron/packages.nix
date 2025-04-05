@@ -8,12 +8,14 @@
     (with pkgs; [
       audacity
       beets
+      bespokesynth
       calibre
       distrho-ports
       emacs
       ffmpeg
       gimp
       imagemagick
+      kdenlive
       libreoffice
       man-pages
       nicotine-plus
