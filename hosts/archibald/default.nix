@@ -32,6 +32,8 @@
   # Set your time zone.
   time.timeZone = "Europe/London";
 
+  musnix.enable = true;
+
   # Select internationalisation properties.
   i18n = {
     defaultLocale = "en_GB.UTF-8";
@@ -100,6 +102,10 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
+    wireplumber = {
+      enable = true;
+      package = pkgs.wireplumber;
+    };
   };
 
   users.users.alex = {
@@ -108,6 +114,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "audio"
     ];
   };
 
@@ -128,6 +135,7 @@
 
   environment.systemPackages = with pkgs; [
     git
+    pavucontrol
   ];
 
   fonts = {

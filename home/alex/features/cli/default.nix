@@ -19,6 +19,10 @@
     ]
   );
 
+  home.shellAliases = {
+    "h." = "hx .";
+  };
+
   programs = {
     zellij.enable = true;
     lazygit.enable = true;

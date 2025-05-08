@@ -8,6 +8,11 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    private-configs = {
+      url = "path:/home/alex/nixos-private";
+      flake = false;
+    };
+
     musnix.url = "github:musnix/musnix";
 
     helix.url = "github:helix-editor/helix/master";
@@ -21,6 +26,7 @@
       home-manager,
       musnix,
       helix,
+      private-configs,
       ...
     }@inputs:
     let
@@ -43,7 +49,9 @@
           ];
         };
         archibald = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit musnix; };
           modules = [
+            inputs.musnix.nixosModules.musnix
             ./hosts/archibald
           ];
         };
@@ -66,7 +74,10 @@
             inherit pkgs-unstable;
             inherit inputs;
           };
-          modules = [ ./home/alex/archibald ];
+          modules = [
+            ./home/alex/archibald
+            (import "${private-configs}/packages.nix")
+          ];
         };
       };
     };

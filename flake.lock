@@ -142,13 +142,27 @@
         "type": "github"
       }
     },
+    "private-configs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 4039398000,
+        "narHash": "sha256-ZoAhqM8PMCKgWOQCLw4gDNTbc+0YUL4k8vh86i8aKOo=",
+        "path": "/home/alex/nixos-private",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/alex/nixos-private",
+        "type": "path"
+      }
+    },
     "root": {
       "inputs": {
         "helix": "helix",
         "home-manager": "home-manager",
         "musnix": "musnix",
         "nixpkgs": "nixpkgs_3",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "private-configs": "private-configs"
       }
     },
     "rust-overlay": {

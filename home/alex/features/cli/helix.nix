@@ -68,6 +68,7 @@
       nil
       lua-language-server
       texlab
+      xsel
     ];
   };
 }
