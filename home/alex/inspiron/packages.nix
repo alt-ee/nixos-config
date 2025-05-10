@@ -20,6 +20,8 @@
       man-pages
       nicotine-plus
       reaper
+      runelite
+      tmux
       unzip
       vlc
       winetricks
@@ -44,8 +46,6 @@
     ++
 
       (with pkgs-unstable; [
-        keepmenu
         renoise
-        todo-txt-cli
       ]);
 }
