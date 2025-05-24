@@ -16,6 +16,9 @@
     musnix.url = "github:musnix/musnix";
 
     helix.url = "github:helix-editor/helix/master";
+
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -27,6 +30,7 @@
       musnix,
       helix,
       private-configs,
+      nix-index-database,
       ...
     }@inputs:
     let
@@ -60,6 +64,7 @@
       # 'home-manager build/switch --flake .#your-username@your-hostname'
       homeConfigurations = {
         "alex@inspiron" = home-manager.lib.homeManagerConfiguration {
+          # think this could be tidied up i.e. just inherit pkgs;
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = {
             inherit pkgs-unstable;
@@ -76,6 +81,7 @@
           };
           modules = [
             ./home/alex/archibald
+            nix-index-database.hmModules.nix-index
             (import "${private-configs}/packages.nix")
           ];
         };
