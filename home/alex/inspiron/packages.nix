@@ -10,6 +10,7 @@
       beets
       bespokesynth
       calibre
+      cardinal
       distrho-ports
       emacs
       ffmpeg
