@@ -7,7 +7,7 @@
 
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
+    
     private-configs = {
       url = "path:/home/alex/nixos-private";
       flake = false;
@@ -65,7 +65,10 @@
             inherit pkgs-unstable;
             inherit inputs;
           };
-          modules = [ ./home/alex/inspiron ];
+          modules = [
+            ./home/alex/inspiron
+            (import "${private-configs}/packages.nix")
+          ];
         };
 
         "alex@archibald" = home-manager.lib.homeManagerConfiguration {
