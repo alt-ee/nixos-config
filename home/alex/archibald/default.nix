@@ -14,19 +14,31 @@
     ../features/cli/git.nix
   ];
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowUnfreePredicate = _: true;
+  options = {
+    nixfiles = lib.mkOption {
+      type = lib.types.path;
+      apply = toString;
+      default = "${config.home.homeDirectory}/nixos-config";
+      example = "${config.home.homeDirectory}/nixos-config";
+      description = "Location of nixos config files";
+    };
   };
 
-  programs.home-manager.enable = true;
+  config = {
+    nixpkgs.config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+    };
 
-  home = {
-    username = "alex";
-    homeDirectory = "/home/alex";
+    programs.home-manager.enable = true;
+
+    home = {
+      username = "alex";
+      homeDirectory = "/home/alex";
+    };
+
+    systemd.user.startServices = "sd-switch";
+
+    home.stateVersion = "24.11";
   };
-
-  systemd.user.startServices = "sd-switch";
-
-  home.stateVersion = "24.11";
 }
