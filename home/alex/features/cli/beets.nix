@@ -40,6 +40,7 @@
       import = {
         languages = "en";
         duplicate_action = "skip";
+        move = true;
         set_fields = {
           day = "$orginal_day";
           month = "$orginal_month";
