@@ -11,6 +11,7 @@
       discord
       distrho-ports
       ffmpeg
+      gamemode
       fooyin
       imagemagick
       kdenlive
