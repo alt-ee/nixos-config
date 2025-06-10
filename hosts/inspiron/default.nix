@@ -26,7 +26,7 @@
     efi.canTouchEfiVariables = true;
   };
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "inspiron"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager.enable = true;
