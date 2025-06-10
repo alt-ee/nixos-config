@@ -10,6 +10,7 @@
     ./zk.nix
     ./bash.nix
     ./fish.nix
+    ./tmux.nix
   ];
 
   home.packages = (
