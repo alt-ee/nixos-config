@@ -106,6 +106,13 @@
       enable = true;
       package = pkgs.wireplumber;
     };
+    extraConfig.pipewire = {
+      "99-disable-bell" = {
+        "context.properties" = {
+          "module.x11.bell" = false;
+        };
+      };
+    };
   };
 
   users.users.alex = {

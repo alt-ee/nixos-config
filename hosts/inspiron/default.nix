@@ -156,6 +156,13 @@
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     jack.enable = true;
+    extraConfig.pipewire = {
+      "99-disable-bell" = {
+        "context.properties" = {
+          "module.x11.bell" = false;
+        };
+      };
+    };
   };
 
   hardware.graphics.enable = true;
