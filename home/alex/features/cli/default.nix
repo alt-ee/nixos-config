@@ -22,7 +22,7 @@
 
   home.shellAliases = {
     "h." = "hx .";
-    "nc packages" = "cd ${config.nixfiles} && hx home/$user/$hostName/packages.nix";
+    "ncp" = "cd ${config.nixfiles} && hx home/$USER/$hostname/packages.nix";
   };
 
   programs = {
