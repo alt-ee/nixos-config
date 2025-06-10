@@ -14,7 +14,9 @@
         "fromfilename"
         "convert"
         "fetchart"
+        "embedart"
         "mbsync"
+        "replaygain"
       ];
       asciify_paths = true;
 
@@ -42,15 +44,22 @@
         duplicate_action = "skip";
         move = true;
         set_fields = {
-          day = "$orginal_day";
-          month = "$orginal_month";
-          year = "$orginal_year";
+          day = "%if{$orginal_day, $original_day, $day}";
+          month = "%if{$orginal_month, $orginal_month, $month}";
+          year = "%if{$orginal_year, $orginal_year, $year}";
         };
       };
+
+      replaygain = {
+        backend = "ffmpeg";
+        overwrite = true;
+      };
+
       paths = {
         default = "$albumartist/[$original_year] $album%aunique{}/$track - $title";
         comp = "Compilations/[$original_year] $album%aunique{}/$track - $title";
       };
+
       fetchart = {
         maxwidth = 1500;
         cover_format = "JPEG";
