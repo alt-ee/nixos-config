@@ -16,13 +16,11 @@
       ffmpeg
       gimp
       imagemagick
-      kdenlive
       libreoffice
       man-pages
       nicotine-plus
-      reaper
-      runelite
-      tmux
+      puredata
+      supercollider
       unzip
       vlc
       winetricks
