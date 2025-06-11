@@ -7,7 +7,7 @@
 
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    
+
     private-configs = {
       url = "path:/home/alex/nixos-private";
       flake = false;
@@ -72,6 +72,7 @@
           };
           modules = [
             ./home/alex/inspiron
+            nix-index-database.hmModules.nix-index
             (import "${private-configs}/packages.nix")
           ];
         };
