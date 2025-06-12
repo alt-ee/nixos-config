@@ -9,7 +9,9 @@
 
       directory = "${config.xdg.userDirs.music}/Collection";
       library = "${config.xdg.userDirs.music}/Collection/library.db";
+      original_date = true;
       plugins = [
+        "discogs"
         "edit"
         "fromfilename"
         "convert"
@@ -43,11 +45,6 @@
         languages = "en";
         duplicate_action = "skip";
         move = true;
-        set_fields = {
-          day = "%if{$orginal_day, $original_day, $day}";
-          month = "%if{$orginal_month, $orginal_month, $month}";
-          year = "%if{$orginal_year, $orginal_year, $year}";
-        };
       };
 
       replaygain = {
@@ -56,8 +53,8 @@
       };
 
       paths = {
-        default = "$albumartist/[$original_year] $album%aunique{}/$track - $title";
-        comp = "Compilations/[$original_year] $album%aunique{}/$track - $title";
+        default = "$albumartist/[$year] $album%aunique{}/$track - $title";
+        comp = "Compilations/[$year] $album%aunique{}/$track - $title";
       };
 
       fetchart = {
