@@ -14,7 +14,7 @@
       gamemode
       fooyin
       imagemagick
-      kdenlive
+      kdePackages.kdenlive
       obs-studio
       plugdata
       prismlauncher
