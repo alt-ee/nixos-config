@@ -20,6 +20,7 @@
       prismlauncher
       soulseekqt
       unrar
+      vcv-rack
       vlc
       yabridge
       yabridgectl
