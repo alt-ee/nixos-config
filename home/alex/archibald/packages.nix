@@ -14,12 +14,13 @@
       gamemode
       fooyin
       imagemagick
-      kdenlive
+      kdePackages.kdenlive
       obs-studio
       plugdata
       prismlauncher
       soulseekqt
       unrar
+      vcv-rack
       vlc
       yabridge
       yabridgectl
