@@ -8,33 +8,26 @@
     (with pkgs; [
       audacity
       beets
-      bespokesynth
       calibre
-      cardinal
-      distrho-ports
-      emacs
+      cmus
       ffmpeg
       gimp
       imagemagick
       libreoffice
       man-pages
+      newsboat
       nicotine-plus
       puredata
       supercollider
       unzip
+      uxn
+      vault-tasks
       vlc
       winetricks
       wineWowPackages.stable
       xclip
       xsel
-      yabridge
-      yabridgectl
 
-      (lutris.override {
-        extraPkgs = pkgs: [
-          pango
-        ];
-      })
       (writeShellScriptBin "nix-jack" ''
         exec /usr/bin/env \
           LD_LIBRARY_PATH=${pipewire.jack}/lib''${LD_LIBRARY_PATH:+:''${LD_LIBRARY_PATH}} \
