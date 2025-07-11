@@ -35,12 +35,6 @@
       };
     };
     languages = {
-      language-server = {
-        zk = {
-          command = "zk";
-          args = [ "lsp" ];
-        };
-      };
       language = [
         {
           name = "nix";
@@ -58,13 +52,13 @@
           name = "markdown";
           language-servers = [
             "marksman"
-            "zk"
           ];
         }
       ];
     };
     extraPackages = with pkgs; [
       marksman
+      clang-tools
       nil
       lua-language-server
       texlab
