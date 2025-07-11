@@ -57,9 +57,7 @@
       options = "--delete-older-than 1w";
     };
 
-    settings = {
-      auto-optimise-store = true;
-    };
+    optimise.automatic = true;
   };
 
   # Enable the X11 windowing system.
