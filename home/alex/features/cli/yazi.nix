@@ -4,8 +4,16 @@
     enable = true;
     theme = {
       status = {
-        separator_open = "";
-        separator_close = "";
+        sep_left.open = "";
+        sep_left.close = "";
+        sep_right.open = "";
+        sep_right.close = "";
+      };
+      tabs = {
+        sep_inner.open = "";
+        sep_inner.close = "";
+        sep_outer.open = "";
+        sep_outer.close = "";
       };
       icon = {
         globs = [ ];
