@@ -8,11 +8,6 @@
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    private-configs = {
-      url = "path:/home/alex/nixos-private";
-      flake = false;
-    };
-
     musnix.url = "github:musnix/musnix";
 
     helix.url = "github:helix-editor/helix/master";
@@ -29,7 +24,6 @@
       home-manager,
       musnix,
       helix,
-      private-configs,
       nix-index-database,
       ...
     }@inputs:
@@ -73,7 +67,6 @@
           modules = [
             ./home/alex/inspiron
             nix-index-database.hmModules.nix-index
-            (import "${private-configs}/packages.nix")
           ];
         };
 
@@ -86,7 +79,6 @@
           modules = [
             ./home/alex/archibald
             nix-index-database.hmModules.nix-index
-            (import "${private-configs}/packages.nix")
           ];
         };
       };
