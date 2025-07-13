@@ -14,6 +14,7 @@
       gimp
       imagemagick
       libreoffice
+      lutris
       man-pages
       newsboat
       nicotine-plus
@@ -21,6 +22,7 @@
       supercollider
       unzip
       uxn
+      uxn.projects
       vault-tasks
       vlc
       winetricks
