@@ -58,8 +58,7 @@
       # 'home-manager build/switch --flake .#your-username@your-hostname'
       homeConfigurations = {
         "alex@inspiron" = home-manager.lib.homeManagerConfiguration {
-          # think this could be tidied up i.e. just inherit pkgs;
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = {
             inherit pkgs-unstable;
             inherit inputs;
@@ -71,7 +70,7 @@
         };
 
         "alex@archibald" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = {
             inherit pkgs-unstable;
             inherit inputs;
