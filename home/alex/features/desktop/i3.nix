@@ -43,8 +43,7 @@ in
         "${mod}+f" = "exec i3-sensible-terminal -e yazi";
         "${mod}+Shift+f" = "exec i3-sensible-terminal -e fish -C yy";
         "${mod}+t" = "exec i3-sensible-terminal";
-        "${mod}+p" = "exec keepmenu -C";
-        "${mod}+Escape" = "exec xflock4";
+        "${mod}+Escape" = "exec dm-tool lock";
 
         "${mod}+slash" = "split h";
         "${mod}+backslash" = "split v";
