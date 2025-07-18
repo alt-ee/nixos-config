@@ -87,6 +87,8 @@
           i3status
         ];
       };
+
+      windowManager.openbox.enable = true;
     };
 
     blueman.enable = true;
