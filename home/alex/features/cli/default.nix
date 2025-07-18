@@ -24,6 +24,7 @@
   home.shellAliases = {
     "h." = "hx .";
     "ncp" = "cd ${config.nixfiles} && hx home/$USER/$hostname/packages.nix";
+    "lg" = "lazygit";
   };
 
   programs = {
