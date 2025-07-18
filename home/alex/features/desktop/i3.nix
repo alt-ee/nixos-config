@@ -44,6 +44,9 @@ in
         "${mod}+Shift+f" = "exec i3-sensible-terminal -e fish -C yy";
         "${mod}+t" = "exec i3-sensible-terminal";
         "${mod}+Escape" = "exec dm-tool lock";
+        "${mod}+Shift+Escape" = ''
+          exec "rofi -show power-menu -modi power-menu:'rofi-power-menu --no-symbols' -theme-str 'window {width: 8em;} listview {lines: 6;}'"
+        '';
 
         "${mod}+slash" = "split h";
         "${mod}+backslash" = "split v";
