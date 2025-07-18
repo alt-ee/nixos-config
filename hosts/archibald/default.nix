@@ -14,6 +14,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../features/fhs.nix
+    ../features/common.nix
   ];
 
   # Bootloader.
@@ -142,7 +143,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    git
     pavucontrol
   ];
 
