@@ -13,6 +13,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../features/fhs.nix
     ../features/common.nix
   ];
 
@@ -31,6 +32,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  programs.nm-applet.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -87,8 +89,6 @@
           i3status
         ];
       };
-
-      windowManager.openbox.enable = true;
     };
 
     blueman.enable = true;
@@ -101,6 +101,9 @@
       naturalScrolling = true;
       tappingDragLock = false;
     };
+
+    gvfs.enable = true;
+    udisks2.enable = true;
   };
 
   boot.extraModprobeConfig = ''
@@ -146,7 +149,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   hardware.bluetooth.enable = true;
 
   security.rtkit.enable = true;

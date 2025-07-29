@@ -96,6 +96,13 @@ in
         };
       };
 
+      floating.criteria = [
+        {
+          class = "SuperCollider";
+          title = "Plot";
+        }
+      ];
+
       colors = {
         focused = {
           background = "#222222";

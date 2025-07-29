@@ -19,7 +19,7 @@
       newsboat
       nicotine-plus
       puredata
-      supercollider
+      supercollider-with-sc3-plugins
       unzip
       uxn
       uxn.projects
