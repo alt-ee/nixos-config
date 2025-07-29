@@ -7,18 +7,22 @@
 {
   home.packages =
     (with pkgs; [
+      bespokesynth
       cardinal
       discord
       distrho-ports
       ffmpeg
-      gamemode
       fooyin
+      gamemode
       imagemagick
       kdePackages.kdenlive
+      lutris
       obs-studio
+      octave
       plugdata
       prismlauncher
       soulseekqt
+      supercollider
       unrar
       vcv-rack
       vlc
@@ -30,6 +34,7 @@
 
       (with pkgs-unstable; [
         godot_4_3
+        # i did this to make some reaper plugins work ig
         (reaper.overrideAttrs (
           finalAttrs: previousAttrs: {
             installPhase =
