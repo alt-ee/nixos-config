@@ -68,7 +68,7 @@
           };
           modules = [
             ./home/alex/inspiron
-            nix-index-database.hmModules.nix-index
+            nix-index-database.homeModules.nix-index
           ];
         };
 
@@ -80,7 +80,7 @@
           };
           modules = [
             ./home/alex/archibald
-            nix-index-database.hmModules.nix-index
+            nix-index-database.homeModules.nix-index
           ];
         };
       };
