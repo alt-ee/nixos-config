@@ -18,6 +18,7 @@
       man-pages
       newsboat
       nicotine-plus
+      plugdata
       puredata
       supercollider-with-sc3-plugins
       unzip
