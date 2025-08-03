@@ -16,6 +16,7 @@
       libreoffice
       lutris
       man-pages
+      nemo
       newsboat
       nicotine-plus
       plugdata
@@ -30,6 +31,8 @@
       wineWowPackages.stable
       xclip
       xsel
+      yabridge
+      yabridgectl
 
       (writeShellScriptBin "nix-jack" ''
         exec /usr/bin/env \

@@ -14,6 +14,7 @@
     ../features/desktop
     ../features/desktop/i3.nix
     ../features/cli/beets.nix
+    ../features/creativity/reaper.nix
   ];
 
   options = {
@@ -91,6 +92,19 @@
           "application/x-renoise-module"
           "application/x-renoise-rns-module"
         ];
+      };
+
+      nemo = {
+        name = "Nemo";
+        exec = "${pkgs.nemo}/bin/nemo";
+      };
+    };
+
+    xdg.mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "inode/directory" = [ "nemo.desktop" ];
+        "application/x-gnome-saved-search" = [ "nemo.desktop" ];
       };
     };
 
