@@ -53,6 +53,13 @@
     };
   };
 
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024; # 16 GB
+    }
+  ];
+
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
@@ -117,6 +124,16 @@
     };
   };
 
+  systemd.extraConfig = "DefaultLimitNOFILE=524288";
+  security.pam.loginLimits = [
+    {
+      domain = "alex";
+      type = "hard";
+      item = "nofile";
+      value = "524288";
+    }
+  ];
+
   users.users.alex = {
     isNormalUser = true;
     description = "alex";
@@ -124,6 +141,7 @@
       "networkmanager"
       "wheel"
       "audio"
+      "gamemode"
     ];
   };
 
@@ -135,6 +153,8 @@
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
   };
+
+  programs.gamemode.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
