@@ -17,11 +17,11 @@
       imagemagick
       kdePackages.kdenlive
       lutris
+      nicotine-plus
       obs-studio
       octave
       plugdata
       prismlauncher
-      soulseekqt
       supercollider
       unrar
       vcv-rack

@@ -12,6 +12,7 @@
     ../features/cli
     ../features/desktop
     ../features/cli/git.nix
+    ../features/cli/beets.nix
   ];
 
   options = {
