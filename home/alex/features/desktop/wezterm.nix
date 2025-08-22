@@ -19,69 +19,6 @@
         config.use_fancy_tab_bar = false
         config.hide_tab_bar_if_only_one_tab = true
 
-        config.command_palette_font = wezterm.font("Iosevka")
-        config.command_palette_font_size = 13
-
-        config.disable_default_key_bindings = true
-        config.leader = { key = 'Space', mods = 'CTRL', timeout_milliseconds = 1000 }
-        config.keys = {
-          {
-            mods = "LEADER",
-            key = "s",
-            action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }
-          },
-          {
-            mods = "LEADER",
-            key = "d",
-            action = act.SplitVertical { domain = 'CurrentPaneDomain' }
-          },
-          {
-            mods = "LEADER",
-            key = "t",
-            action = act.SpawnTab('CurrentPaneDomain')
-          },
-          {
-            mods = "LEADER",
-            key = "w",
-            action = act.CloseCurrentTab { confirm = true }
-          },
-          {
-            mods = "LEADER",
-            key = "Tab",
-            action = act.ActivateTabRelative(1)
-          },
-          {
-            mods = "LEADER|SHIFT",
-            key = "Tab",
-            action = act.ActivateTabRelative(-1)
-          },
-          {
-            mods = "LEADER",
-            key = "Space",
-            action = act.ActivateCommandPalette
-          },
-          {
-            mods = "ALT",
-            key = "h",
-            action = act.ActivatePaneDirection 'Left'
-          },
-          {
-            mods = "ALT",
-            key = "j",
-            action = act.ActivatePaneDirection 'Down'
-          },
-          {
-            mods = "ALT",
-            key = "k",
-            action = act.ActivatePaneDirection 'Up'
-          },
-          {
-            mods = "ALT",
-            key = "l",
-            action = act.ActivatePaneDirection 'Right'
-          }          
-        }
-
         return config
     '';
 

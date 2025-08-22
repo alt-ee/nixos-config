@@ -78,34 +78,21 @@
     };
 
     xdg.desktopEntries = {
-      renoise = {
-        name = "Renoise";
-        genericName = "Music Tracker";
-        type = "Application";
-        categories = [
-          "AudioVideo"
-          "Audio"
-        ];
-        exec = "nix-jack renoise";
-        terminal = false;
-        mimeType = [
-          "application/x-renoise-module"
-          "application/x-renoise-rns-module"
-        ];
-      };
-
-      nemo = {
-        name = "Nemo";
-        exec = "${pkgs.nemo}/bin/nemo";
-      };
-    };
-
-    xdg.mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "inode/directory" = [ "nemo.desktop" ];
-        "application/x-gnome-saved-search" = [ "nemo.desktop" ];
-      };
+      # renoise = {
+      #   name = "Renoise";
+      #   genericName = "Music Tracker";
+      #   type = "Application";
+      #   categories = [
+      #     "AudioVideo"
+      #     "Audio"
+      #   ];
+      #   exec = "pw-jack renoise";
+      #   terminal = false;
+      #   mimeType = [
+      #     "application/x-renoise-module"
+      #     "application/x-renoise-rns-module"
+      #   ];
+      # };
     };
 
     # Nicely reload system units when changing configs

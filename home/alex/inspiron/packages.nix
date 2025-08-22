@@ -4,11 +4,13 @@
   ...
 }:
 {
-  home.packages =
-    (with pkgs; [
+  home.packages = (
+    with pkgs;
+    [
       audacity
       beets
       calibre
+      cardinal
       cmus
       ffmpeg
       gimp
@@ -16,11 +18,13 @@
       libreoffice
       lutris
       man-pages
-      nemo
       newsboat
       nicotine-plus
       plugdata
+      protonvpn-gui
       puredata
+      qbittorrent
+      renoise
       supercollider-with-sc3-plugins
       unzip
       uxn
@@ -33,17 +37,11 @@
       xsel
       yabridge
       yabridgectl
+    ]
+  );
 
-      (writeShellScriptBin "nix-jack" ''
-        exec /usr/bin/env \
-          LD_LIBRARY_PATH=${pipewire.jack}/lib''${LD_LIBRARY_PATH:+:''${LD_LIBRARY_PATH}} \
-          "''$@"
-      '')
-    ])
+  # ++
 
-    ++
-
-      (with pkgs-unstable; [
-        renoise
-      ]);
+  #   (with pkgs-unstable; [
+  #   ]);
 }

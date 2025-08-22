@@ -76,6 +76,7 @@
 
       desktopManager = {
         xterm.enable = false;
+        cinnamon.enable = true;
       };
 
       displayManager.lightdm = {
@@ -210,6 +211,11 @@
     ];
   };
 
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -218,6 +224,7 @@
     xfce.xfce4-pulseaudio-plugin
     pango
     pulseaudio
+    distrobox
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

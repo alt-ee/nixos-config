@@ -7,10 +7,8 @@
   imports = [
     ./helix.nix
     ./yazi.nix
-    ./zk.nix
     ./bash.nix
     ./fish.nix
-    ./tmux.nix
   ];
 
   home.packages = (
@@ -18,6 +16,7 @@
     [
       fzf
       ripgrep
+      tmux
     ]
   );
 
@@ -28,7 +27,6 @@
   };
 
   programs = {
-    zellij.enable = true;
     lazygit.enable = true;
     git.enable = true;
     zoxide.enable = true;
