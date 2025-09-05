@@ -34,7 +34,6 @@
 
       convert = {
         auto = true;
-        embed = true;
         copy_album_art = true;
         album_art_maxwidth = 500;
         never_convert_lossy_files = true;
