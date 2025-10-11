@@ -8,6 +8,7 @@
   home.packages =
     (with pkgs; [
       bespokesynth
+      bitwig-studio
       cardinal
       discord
       distrho-ports
@@ -22,6 +23,9 @@
       octave
       plugdata
       prismlauncher
+      protonvpn-gui
+      qbittorrent
+      renoise
       supercollider
       unrar
       vcv-rack
