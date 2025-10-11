@@ -16,6 +16,11 @@
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -28,6 +33,7 @@
       helix,
       nix-colors,
       nix-index-database,
+      emacs-overlay,
       ...
     }@inputs:
     let
@@ -61,7 +67,10 @@
       # 'home-manager build/switch --flake .#your-username@your-hostname'
       homeConfigurations = {
         "alex@inspiron" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          pkgs = import inputs.nixpkgs {
+            system = "x86_64-linux";
+            overlays = [ emacs-overlay.overlays.default ];
+          };
           extraSpecialArgs = {
             inherit pkgs-unstable;
             inherit inputs;

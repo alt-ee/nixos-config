@@ -15,6 +15,7 @@
     ../features/desktop/i3.nix
     ../features/cli/beets.nix
     ../features/creativity/reaper.nix
+    ../features/desktop/emacs.nix
   ];
 
   options = {
@@ -41,6 +42,8 @@
     };
 
     programs.home-manager.enable = true;
+
+    programs.info.enable = true;
 
     home = {
       username = "alex";

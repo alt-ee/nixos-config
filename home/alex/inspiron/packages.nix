@@ -9,6 +9,7 @@
     [
       audacity
       beets
+      buckets
       calibre
       cardinal
       cmus

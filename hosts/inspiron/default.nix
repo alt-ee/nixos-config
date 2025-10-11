@@ -130,6 +130,16 @@
     "nvidia_modeset"
   ];
 
+  systemd.extraConfig = "DefaultLimitNOFILE=524288";
+  security.pam.loginLimits = [
+    {
+      domain = "alex";
+      type = "hard";
+      item = "nofile";
+      value = "524288";
+    }
+  ];
+
   programs = {
     firefox.enable = true;
     file-roller.enable = true;
