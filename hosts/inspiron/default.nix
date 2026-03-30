@@ -76,7 +76,7 @@
 
       desktopManager = {
         xterm.enable = false;
-        cinnamon.enable = true;
+        xfce.enable = true;
       };
 
       displayManager.lightdm = {
@@ -84,17 +84,17 @@
         greeters.slick.enable = true;
       };
 
-      windowManager.i3 = {
-        enable = true;
-        extraPackages = with pkgs; [
-          i3status
-        ];
-      };
+      # windowManager.i3 = {
+      #   enable = true;
+      #   extraPackages = with pkgs; [
+      #     i3status
+      #   ];
+      # };
     };
 
     blueman.enable = true;
     displayManager = {
-      defaultSession = "none+i3";
+      defaultSession = "xfce";
     };
 
     libinput.touchpad = {
@@ -189,6 +189,7 @@
       "networkmanager"
       "wheel"
       "audio"
+      "dialout"
     ];
   };
 
