@@ -76,26 +76,16 @@
 
       desktopManager = {
         xterm.enable = false;
-        cinnamon.enable = true;
+        xfce.enable = true;
       };
 
       displayManager.lightdm = {
         enable = true;
         greeters.slick.enable = true;
       };
-
-      windowManager.i3 = {
-        enable = true;
-        extraPackages = with pkgs; [
-          i3status
-        ];
-      };
     };
 
     blueman.enable = true;
-    displayManager = {
-      defaultSession = "none+i3";
-    };
 
     libinput.touchpad = {
       disableWhileTyping = true;
@@ -189,6 +179,7 @@
       "networkmanager"
       "wheel"
       "audio"
+      "dialout"
     ];
   };
 
@@ -229,9 +220,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    xsettingsd
     pavucontrol
     xfce.xfce4-pulseaudio-plugin
+    xfce.xfce4-whiskermenu-plugin
     pango
     pulseaudio
     distrobox

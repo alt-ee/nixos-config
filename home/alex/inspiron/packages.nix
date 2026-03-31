@@ -9,6 +9,7 @@
     [
       audacity
       beets
+      bolt-launcher
       buckets
       calibre
       cardinal
@@ -16,17 +17,23 @@
       ffmpeg
       gimp
       imagemagick
+      itgmania
       libreoffice
       lutris
+      m8c
       man-pages
+      mpv
       newsboat
       nicotine-plus
       plugdata
       protonvpn-gui
+      projectm_3
       puredata
       qbittorrent
       renoise
+      runelite
       supercollider-with-sc3-plugins
+      tytools
       unzip
       uxn
       uxn.projects
