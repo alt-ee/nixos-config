@@ -8,7 +8,9 @@
   home.packages =
     (with pkgs; [
       bespokesynth
-      bitwig-studio
+      bolt-launcher
+      bottles
+      bitwig-studio4
       cardinal
       discord
       distrho-ports
@@ -21,11 +23,13 @@
       nicotine-plus
       obs-studio
       octave
+      kdePackages.okular
       plugdata
       prismlauncher
       protonvpn-gui
       qbittorrent
       renoise
+      runelite
       supercollider
       unrar
       vcv-rack
@@ -38,6 +42,7 @@
 
       (with pkgs-unstable; [
         godot_4_3
+        vintagestory
         # i did this to make some reaper plugins work ig
         (reaper.overrideAttrs (
           finalAttrs: previousAttrs: {

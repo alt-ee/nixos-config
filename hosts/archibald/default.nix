@@ -156,7 +156,13 @@
 
   programs.gamemode.enable = true;
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "dotnet-runtime-wrapped-7.0.20"
+      "dotnet-runtime-7.0.20"
+    ];
+  };
 
   nix.settings = {
     experimental-features = "nix-command flakes";
@@ -165,6 +171,8 @@
   environment.systemPackages = with pkgs; [
     pavucontrol
   ];
+
+  services.flatpak.enable = true;
 
   fonts = {
     fontconfig = {
@@ -192,8 +200,8 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 42420 ];
+  networking.firewall.allowedUDPPorts = [ 42420 ];
 
   system.stateVersion = "24.11";
 }
