@@ -83,19 +83,9 @@
         enable = true;
         greeters.slick.enable = true;
       };
-
-      # windowManager.i3 = {
-      #   enable = true;
-      #   extraPackages = with pkgs; [
-      #     i3status
-      #   ];
-      # };
     };
 
     blueman.enable = true;
-    displayManager = {
-      defaultSession = "xfce";
-    };
 
     libinput.touchpad = {
       disableWhileTyping = true;
@@ -230,7 +220,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    xsettingsd
     pavucontrol
     xfce.xfce4-pulseaudio-plugin
     pango

@@ -12,7 +12,6 @@
     ../features/cli
     ../features/cli/man.nix
     ../features/desktop
-    ../features/desktop/i3.nix
     ../features/cli/beets.nix
     ../features/creativity/reaper.nix
     ../features/desktop/emacs.nix
