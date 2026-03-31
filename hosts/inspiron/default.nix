@@ -222,6 +222,7 @@
   environment.systemPackages = with pkgs; [
     pavucontrol
     xfce.xfce4-pulseaudio-plugin
+    xfce.xfce4-whiskermenu-plugin
     pango
     pulseaudio
     distrobox
