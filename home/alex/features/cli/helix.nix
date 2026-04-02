@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  pkgs-unstable,
   lib,
   ...
 }:
@@ -8,9 +9,9 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    package = inputs.helix.packages."${pkgs.system}".helix;
+    package = pkgs-unstable.steelix;
     settings = {
-      theme = "base16_transparent";
+      theme = "base16_default";
       editor = {
         line-number = "relative";
         text-width = 120;
@@ -66,13 +67,17 @@
         }
       ];
     };
-    extraPackages = with pkgs; [
-      marksman
-      clang-tools
-      nil
-      lua-language-server
-      texlab
-      xsel
-    ];
+    extraPackages =
+      (with pkgs; [
+        marksman
+        clang-tools
+        nil
+        lua-language-server
+        texlab
+        xsel
+      ])
+      ++ (with pkgs-unstable; [
+        steel-language-server
+      ]);
   };
 }
