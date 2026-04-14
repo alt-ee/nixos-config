@@ -39,6 +39,11 @@
       homeDirectory = "/home/alex";
     };
 
+    nix.gc = {
+      automatic = true;
+      options = "--delete-older-than 7d";
+    };
+
     systemd.user.startServices = "sd-switch";
 
     home.stateVersion = "24.11";
