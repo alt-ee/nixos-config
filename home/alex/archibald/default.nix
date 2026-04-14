@@ -13,6 +13,7 @@
     ../features/desktop
     ../features/cli/git.nix
     ../features/cli/beets.nix
+    ../features/desktop/emacs.nix
   ];
 
   options = {

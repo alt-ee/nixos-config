@@ -12,6 +12,7 @@
       bottles
       bitwig-studio4
       cardinal
+      clonehero
       discord
       distrho-ports
       ffmpeg
