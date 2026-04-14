@@ -10,8 +10,6 @@
 
     musnix.url = "github:musnix/musnix";
 
-    helix.url = "github:helix-editor/helix/master";
-
     nix-colors.url = "github:misterio77/nix-colors";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
@@ -30,7 +28,6 @@
       nixpkgs-unstable,
       home-manager,
       musnix,
-      helix,
       nix-colors,
       nix-index-database,
       emacs-overlay,

@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   lib,
   ...
@@ -8,7 +7,6 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    package = inputs.helix.packages."${pkgs.system}".helix;
     settings = {
       theme = "base16_transparent";
       editor = {
