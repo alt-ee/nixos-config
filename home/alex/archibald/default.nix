@@ -14,6 +14,7 @@
     ../features/cli/git.nix
     ../features/cli/beets.nix
     ../features/desktop/emacs.nix
+    ../features/creativity/reaper.nix
   ];
 
   options = {
