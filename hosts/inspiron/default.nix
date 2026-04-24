@@ -120,7 +120,9 @@
     "nvidia_modeset"
   ];
 
-  systemd.extraConfig = "DefaultLimitNOFILE=524288";
+  systemd.settings.Manager = {
+    DefaultLimitNOFILE = 524288;
+  };
   security.pam.loginLimits = [
     {
       domain = "alex";
@@ -132,7 +134,6 @@
 
   programs = {
     firefox.enable = true;
-    file-roller.enable = true;
     thunar.plugins = [ pkgs.xfce.thunar-archive-plugin ];
     dconf.enable = true;
     steam = {
@@ -226,6 +227,7 @@
     pango
     pulseaudio
     distrobox
+    file-roller
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
