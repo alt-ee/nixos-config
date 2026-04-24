@@ -10,10 +10,10 @@
       audacity
       beets
       bolt-launcher
-      buckets
       calibre
       cardinal
       cmus
+      distrho-ports
       ffmpeg
       gimp
       imagemagick
@@ -23,21 +23,15 @@
       m8c
       man-pages
       mpv
-      newsboat
       nicotine-plus
       plugdata
       protonvpn-gui
-      projectm_3
       puredata
       qbittorrent
       renoise
-      runelite
       supercollider-with-sc3-plugins
       tytools
       unzip
-      uxn
-      uxn.projects
-      vault-tasks
       vlc
       winetricks
       wineWowPackages.stable
