@@ -12,6 +12,7 @@
     ../features/cli
     ../features/cli/man.nix
     ../features/desktop
+    ../features/desktop/i3.nix
     ../features/cli/beets.nix
     ../features/creativity/reaper.nix
     ../features/desktop/emacs.nix
@@ -54,10 +55,6 @@
       file = {
         ".config/nvim/" = {
           source = config.lib.file.mkOutOfStoreSymlink "${config.dotfiles}/.config/nvim";
-        };
-
-        ".config/i3status/" = {
-          source = config.lib.file.mkOutOfStoreSymlink "${config.dotfiles}/.config/i3status";
         };
       };
 

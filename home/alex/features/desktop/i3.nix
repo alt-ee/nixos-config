@@ -14,7 +14,6 @@ in
 
   xsession.windowManager.i3 = {
     enable = true;
-    package = pkgs.i3-gaps;
     config = {
       modifier = mod;
 
@@ -43,6 +42,8 @@ in
         "${mod}+f" = "exec i3-sensible-terminal -e yazi";
         "${mod}+Shift+f" = "exec i3-sensible-terminal -e fish -C yy";
         "${mod}+t" = "exec i3-sensible-terminal";
+		"${mod}+b" = "exec firefox";
+		"${mod}+e" = "exec emacs";
         "${mod}+Escape" = "exec dm-tool lock";
         "${mod}+Shift+Escape" = ''
           exec "rofi -show power-menu -modi power-menu:'rofi-power-menu --no-symbols' -theme-str 'window {width: 8em;} listview {lines: 6;}'"
@@ -56,6 +57,7 @@ in
         "${mod}+m" = "fullscreen toggle";
         "${mod}+Shift+Return" = "floating toggle";
         "${mod}+Return" = "focus mode_toggle";
+
         "XF86AudioRaiseVolume" =
           "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && ${refreshi3status}";
         "XF86AudioLowerVolume" =

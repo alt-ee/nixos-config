@@ -16,6 +16,6 @@
     extraConfig = {
       drun-display-format = "{name}";
     };
-    theme = "${config.dotfiles}/.config/rofi/theme.rasi";
+    theme = "${config.dotfiles}/rofi/theme.rasi";
   };
 }

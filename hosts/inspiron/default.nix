@@ -74,6 +74,13 @@
         layout = "gb";
       };
 
+      windowManager.i3 = {
+        enable = true;
+        extraPackages = with pkgs; [
+          i3status
+        ];
+      };
+
       desktopManager = {
         xterm.enable = false;
         xfce.enable = true;
@@ -210,6 +217,7 @@
       roboto-mono
       fira-code
       iosevka
+      aporetic
     ];
   };
 
