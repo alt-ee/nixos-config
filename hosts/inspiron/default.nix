@@ -8,7 +8,6 @@
   musnix,
   ...
 }:
-
 {
   imports = [
     # Include the results of the hardware scan.
@@ -250,6 +249,12 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
