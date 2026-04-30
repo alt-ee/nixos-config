@@ -9,6 +9,7 @@
 {
   imports = [
     ./packages.nix
+    ../services/mounts.nix
     ../features/cli
     ../features/cli/man.nix
     ../features/desktop

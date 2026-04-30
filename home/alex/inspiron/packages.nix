@@ -28,11 +28,13 @@
       protonvpn-gui
       puredata
       qbittorrent
+      rclone
       renoise
-      supercollider-with-sc3-plugins
+      supercollider
       tytools
       unzip
       vlc
+      w3m
       winetricks
       wineWowPackages.stable
       xclip
@@ -41,7 +43,6 @@
       yabridgectl
     ]
   );
-
   # ++
 
   #   (with pkgs-unstable; [
