@@ -28,7 +28,11 @@
   networking.hostName = "inspiron"; # Define your hostname.
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [ networkmanager-openvpn ];
+  };
+
   programs.nm-applet.enable = true;
 
   # Set your time zone.
