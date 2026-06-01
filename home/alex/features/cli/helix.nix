@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-local,
   lib,
   ...
 }:
@@ -43,6 +44,9 @@
       };
     };
     languages = {
+      language-server.sclang-lint-server = with pkgs-local; {
+        command = "${sclang-lint}/bin/sclang-lint-server";
+      };
       language = [
         {
           name = "nix";
@@ -62,15 +66,27 @@
             "marksman"
           ];
         }
+        {
+          name = "supercollider";
+          file-types = [
+            "sc"
+          ];
+          language-servers = [
+            "sclang-lint-server"
+          ];
+        }
       ];
     };
-    extraPackages = with pkgs; [
-      marksman
-      clang-tools
-      nil
-      lua-language-server
-      texlab
-      xsel
-    ];
+    extraPackages = (
+      with pkgs;
+      [
+        marksman
+        clang-tools
+        nil
+        lua-language-server
+        texlab
+        xsel
+      ]
+    );
   };
 }

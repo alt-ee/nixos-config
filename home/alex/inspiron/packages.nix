@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-unstable,
   ...
 }:
 {
@@ -43,8 +42,10 @@
       yabridgectl
     ]
   );
-  # ++
 
-  #   (with pkgs-unstable; [
+  # ++ (with pkgs-local; [
+  # ]);
+
+  # ++ (with pkgs-unstable; [
   #   ]);
 }
