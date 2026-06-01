@@ -5,7 +5,7 @@
 {
   imports = [
     ./zathura.nix
-    ./wezterm.nix
+    # ./wezterm.nix
   ];
 
   home.packages = (
@@ -13,6 +13,7 @@
     [
       keepassxc
       obsidian
+      wezterm
     ]
   );
 
