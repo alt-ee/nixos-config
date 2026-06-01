@@ -1,9 +1,6 @@
 {
-  inputs,
   lib,
   config,
-  pkgs,
-  pkgs-unstable,
   ...
 }:
 {
@@ -52,12 +49,6 @@
       sessionPath = [
         "${config.home.homeDirectory}/bin"
       ];
-
-      file = {
-        ".config/nvim/" = {
-          source = config.lib.file.mkOutOfStoreSymlink "${config.dotfiles}/.config/nvim";
-        };
-      };
 
       sessionVariables = {
         TERMINAL = "wezterm";

@@ -34,26 +34,24 @@
       ...
     }@inputs:
     let
-      # inherit (self) outputs;
       system = "x86_64-linux";
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
       };
+      pkgs-local = import ./pkgs { pkgs = nixpkgs.legacyPackages.x86_64-linux; };
     in
     {
-      # 'nixos-rebuild build/switch --flake .#your-hostname'
       nixosConfigurations = {
         inspiron = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit musnix; };
-          # > Our main nixos configuration file <
+          specialArgs = { inherit inputs; };
           modules = [
             inputs.musnix.nixosModules.musnix
             ./hosts/inspiron
           ];
         };
         archibald = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit musnix; };
+          specialArgs = { inherit inputs; };
           modules = [
             inputs.musnix.nixosModules.musnix
             ./hosts/archibald
@@ -61,7 +59,6 @@
         };
       };
 
-      # 'home-manager build/switch --flake .#your-username@your-hostname'
       homeConfigurations = {
         "alex@inspiron" = home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs {
@@ -70,6 +67,7 @@
           };
           extraSpecialArgs = {
             inherit pkgs-unstable;
+            inherit pkgs-local;
             inherit inputs;
           };
           modules = [
@@ -82,6 +80,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = {
             inherit pkgs-unstable;
+            inherit pkgs-local;
             inherit inputs;
           };
           modules = [
