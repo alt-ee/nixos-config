@@ -84,6 +84,8 @@ in
         "${mod}+Shift+8" = "move container to workspace number 8, workspace number 8";
         "${mod}+Shift+9" = "move container to workspace number 9, workspace number 9";
         "${mod}+Shift+0" = "move container to workspace number 10, workspace number 10";
+
+        "${mod}+x" = "move workspace to output next";
       };
 
       modes = {
