@@ -10,7 +10,6 @@
       bespokesynth
       bolt-launcher
       bottles
-      bitwig-studio4
       cardinal
       clonehero
       discord
@@ -33,7 +32,6 @@
       runelite
       supercollider
       unrar
-      vcv-rack
       vlc
       yabridge
       yabridgectl
@@ -43,6 +41,7 @@
 
       (with pkgs-unstable; [
         godot_4_3
+        bitwig-studio
         vintagestory
       ]);
 }
