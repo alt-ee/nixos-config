@@ -14,7 +14,6 @@
   home.packages = (
     with pkgs;
     [
-      fzf
       ripgrep
       tmux
     ]
@@ -34,6 +33,10 @@
     direnv = {
       enable = true;
       nix-direnv.enable = true;
+    };
+    fzf = {
+      enable = true;
+      enableFishIntegration = true;
     };
   };
 }
