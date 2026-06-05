@@ -12,6 +12,10 @@ in
     ./rofi.nix
   ];
 
+  home.packages = with pkgs; [
+    brightnessctl
+  ];
+
   xsession.windowManager.i3 = {
     enable = true;
     config = {
@@ -66,6 +70,8 @@ in
           "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && ${refreshi3status}";
         "XF86AudioMicMute" =
           "exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refreshi3status}";
+        "XF86MonBrightnessUp" = "exec brightnessctl s 100%";
+        "XF86MonBrightnessDown" = "exec brightnessctl s 5%";
 
         "--release Print" = "exec import -silent clipboard:";
         "--release Control+Print" = "exec import -silent -window root clipboard:";
