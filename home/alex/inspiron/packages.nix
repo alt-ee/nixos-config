@@ -15,6 +15,7 @@
       distrho-ports
       ffmpeg
       gimp
+      grobi
       imagemagick
       itgmania
       libreoffice

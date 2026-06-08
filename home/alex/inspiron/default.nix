@@ -66,6 +66,33 @@
 
     services = {
       xsettingsd.enable = true;
+      grobi = {
+        enable = true;
+        rules = [
+          {
+            name = "Docked";
+            outputs_connected = [
+              "eDP-1"
+              "DP-2"
+            ];
+            configure_row = [
+              "DP-2"
+              "eDP-1"
+            ];
+            primary = "DP-2";
+          }
+          {
+            name = "Mobile";
+            outputs_disconnected = [
+              "HDMI-1"
+              "DP-1"
+              "DP-2"
+            ];
+            configure_single = "eDP-1";
+            primary = true;
+          }
+        ];
+      };
     };
 
     xdg.desktopEntries = {
