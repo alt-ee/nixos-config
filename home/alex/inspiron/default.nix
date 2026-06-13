@@ -65,7 +65,6 @@
     };
 
     services = {
-      xsettingsd.enable = true;
       grobi = {
         enable = true;
         rules = [
