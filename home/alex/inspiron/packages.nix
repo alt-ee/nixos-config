@@ -18,6 +18,7 @@
       grobi
       imagemagick
       itgmania
+      kakoune
       libreoffice
       lutris
       m8c
